@@ -17,9 +17,9 @@ We hope this 3D fully-annotated test set can facilitate the development and eval
 
 Sample annotations:
 <p float="left">
-  <img src="000238_03_02_082.png" width="100" />
-  <img src="000530_04_01_320.png" width="100" /> 
-  <img src="000560_03_01_064.png" width="100" />
+  <img src="000238_04_02_082.png" width="300" />
+  <img src="000530_04_01_320.png" width="300" /> 
+  <img src="000560_03_01_064.png" width="300" />
 </p>
 
 To deal with the missing annotations in the training set of DeepLesion, you can also refer to the lesion mining algorithms in [3,4].
