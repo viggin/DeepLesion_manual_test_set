@@ -30,10 +30,10 @@ To deal with the missing annotations in the training set of DeepLesion, you can 
 The annotations are in `DeepLesion_manual_1K_test_release.pkl`. 
 
     import pickle
-    annotation = pickle.load(open('DeepLesion_manual_1K_test_release.pkl', 'rb'))
-    annotation = annotation['val']  # or annotation['test']
+    annotations = pickle.load(open('DeepLesion_manual_1K_test_release.pkl', 'rb'))
+    annotations = annotation['val']  # or annotation['test']
 
-It is a dict in the format of `annotation[fn] = B`, 
+It is a dict in the format of `annotations[fn] = B`, 
 where `fn` is the name of the sub-volume, `B` is an n-by-6 numpy array, `n` is the number of 3D boxes in the sub-volume.
 Each row of `B` is a 3D box in the format of `[x1, y1, z1, x2, y2, z2]`.
 
@@ -54,5 +54,5 @@ Please see `evaluation_sample.py` for details.
 
 [1] Ke Yan, Xiaosong Wang, Le Lu, Ronald M. Summers, “DeepLesion: automated mining of large-scale lesion annotations and universal lesion detection with deep learning,” J. Med. Imaging, vol. 5, no. 3, p. 1, 2018.   
 [2] Ke Yan, Xiaosong Wang, Le Lu, Ling Zhang, Adam P. Harrison Mohammadhadi Bagheri, Ronald M. Summers, “Deep Lesion Graphs in the Wild: Relationship Learning and Organization of Significant Radiology Image Findings in a Diverse Large-scale Lesion Database,” in CVPR, 2018.  
-[3] Ke Yan, Jinzheng Cai, Youjing Zheng, Adam P. Harrison, Dakai Jin, You-Bao Tang, Yu-Xing Tang, Lingyun Huang, Jing Xiao, Le Lu, “Learning from Multiple Datasets with Heterogeneous and Partial Labels for Universal Lesion Detection in CT,” IEEE Trans. Med. Imaging, 2020.
-[4] Jinzheng Cai et al., “Lesion harvester: Iteratively mining unlabeled lesions and hard-negative examples at scale,” IEEE Trans. Med. Imaging, Jan. 2020.
+[3] Ke Yan, Jinzheng Cai, Youjing Zheng, Adam P. Harrison, Dakai Jin, You-Bao Tang, Yu-Xing Tang, Lingyun Huang, Jing Xiao, Le Lu, “Learning from Multiple Datasets with Heterogeneous and Partial Labels for Universal Lesion Detection in CT,” IEEE Trans. Med. Imaging, 2020.  
+[4] Jinzheng Cai et al., “Lesion harvester: Iteratively mining unlabeled lesions and hard-negative examples at scale,” IEEE Trans. Med. Imaging, 2020.
