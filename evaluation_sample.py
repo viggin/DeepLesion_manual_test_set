@@ -1,3 +1,8 @@
+"""
+Sample evaluation code of the paper
+“Learning from Multiple Datasets with Heterogeneous and Partial Labels for Universal Lesion Detection in CT”
+in IEEE Trans. Med. Imaging, 2020
+"""
 import pickle
 import numpy as np
 
@@ -31,7 +36,7 @@ def main():
     # The name format of a sub-volume is "{volume_name}_{top slice index}-{bottom slice index}", see DL_save_nifti.py
 
     save_fn = 'DeepLesion_manual_1K_test_release.pkl'
-    gts = pickle.load(open(save_fn, 'rb'))['test']
+    gts = pickle.load(open(save_fn, 'rb'))['test']  # or ['val']
 
     # modify this line to put your predicted 3D boxes as the same format as gts, except that
     # boxes_pred[fn] is an n-by-7 numpy array with the last column being the confidence score

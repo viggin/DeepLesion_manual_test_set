@@ -1,3 +1,6 @@
+"""
+Utilities to compute the accuracy for lesion detection.
+"""
 import numpy as np
 from scipy import interpolate
 
