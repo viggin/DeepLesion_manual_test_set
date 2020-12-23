@@ -28,6 +28,11 @@ To deal with the missing annotations in the training set of DeepLesion, you can 
 ## Usage
 
 The annotations are in `DeepLesion_manual_1K_test_release.pkl`. 
+
+    import pickle
+    annotation = pickle.load(open('DeepLesion_manual_1K_test_release.pkl', 'rb'))
+    annotation = annotation['val']  # or annotation['test']
+
 It is a dict in the format of `annotation[fn] = B`, 
 where `fn` is the name of the sub-volume, `B` is an n-by-6 numpy array, `n` is the number of 3D boxes in the sub-volume.
 Each row of `B` is a 3D box in the format of `[x1, y1, z1, x2, y2, z2]`.
